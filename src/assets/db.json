@@ -11,19 +11,9 @@
       "colorId": 3
     },
     {
-      "id": 4,
-      "name": "Книги",
-      "colorId": 2
-    },
-    {
-      "name": "bv",
+      "name": "s",
       "colorId": 1,
-      "id": 9
-    },
-    {
-      "name": "fd",
-      "colorId": 3,
-      "id": 10
+      "id": 4
     }
   ],
   "tasks": [
@@ -52,19 +42,19 @@
       "completed": false
     },
     {
-      "listId": 2,
+      "listId": 5,
       "text": "123",
       "completed": true,
       "id": 5
     },
     {
-      "listId": 4,
+      "listId": 6,
       "text": "Купить 1984!",
       "completed": true,
       "id": 10
     },
     {
-      "listId": 2,
+      "listId": 7,
       "text": "222",
       "completed": true,
       "id": 12

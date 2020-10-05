@@ -4,19 +4,22 @@ import penSvg from '../../assets/img/pen.svg';
 
 import './Tasks.scss';
 
-const Tasks = () => {
+const Tasks = ({list}) => {
+
+  console.log(list);
   return(
     <div className="tasks">
       <h2 className="tasks__title">
-        Фронтенд
+        {list.name}
         <img src={penSvg} alt="pen"/>
       </h2>
 
       <div className="tasks__items">
-        <div className="tasks__items-row">
+      {list.tasks.map(task => (
+        <div key={task.id} className="tasks__items-row">
           <div className="checkbox">
-            <input id="check" type="checkbox"/>
-            <label htmlFor="check">
+            <input id={`task-${task.id}`} type="checkbox"/>
+            <label htmlFor={`task-${task.id}`}>
               <svg
               width="11"
               height="8"
@@ -32,8 +35,12 @@ const Tasks = () => {
               </svg>
             </label>
           </div>
-          <p>Изучить JavaScript</p>
+
+          <input readOnly value={task.text}/>
         </div>
+      ))}
+
+
       </div>
     </div>
   );
