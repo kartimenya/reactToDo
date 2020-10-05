@@ -1,0 +1,77 @@
+.tasks{
+  &__title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64C4ED;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F2F2F2;
+    &:hover{
+      img{
+        opacity: .5;
+      }
+    }
+    img{
+      opacity: 0;
+      cursor: pointer;
+      margin-left: 15px;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__items{
+    &-row{
+      display: flex;
+      align-items: center;
+
+      p{
+        margin-left: 15px;
+      }
+    }
+  }
+  .checkbox{
+
+    &:hover{
+      label{
+        background: #F2F2F2;
+        border-color: #F2F2F2;
+        svg{
+          opacity: 1;
+          path{
+            stroke:#B3B3B3;
+          }
+        }
+      }
+    }
+    input{
+      display: none;
+    }
+    label{
+      border: 2px solid #E8E8E8;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input:checked + label{
+      background: #4DD599;
+      border-color: #4DD599;
+      svg{
+        opacity: 1;
+        path{
+          stroke:#fff;
+        }
+      }
+    }
+    svg{
+      opacity: 0;
+    }
+  }
+}

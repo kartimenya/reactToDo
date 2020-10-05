@@ -8,12 +8,27 @@
     }
   }
 
+  &__remove-icon{
+    opacity: 0;
+  }
+
   li{
     display: flex;
     align-items: center;
     padding: 10px 12px;
     margin-bottom: 5px;
     cursor: pointer;
+
+    span{
+      flex: 1;
+    }
+
+    &:hover{
+      background: #fff;
+      .list__remove-icon{
+        opacity: 1;
+      }
+    }
 
     &.active{
       background: #FFFFFF;
