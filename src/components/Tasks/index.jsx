@@ -5,8 +5,6 @@ import penSvg from '../../assets/img/pen.svg';
 import './Tasks.scss';
 
 const Tasks = ({list}) => {
-
-  console.log(list);
   return(
     <div className="tasks">
       <h2 className="tasks__title">

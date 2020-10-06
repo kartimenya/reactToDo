@@ -8,7 +8,7 @@ import removeSvg from '../../assets/img/remove.svg';
 
 import './List.scss';
 
-const List = ({items, isRemovable, onClick, onRemove}) => {
+const List = ({items, isRemovable, onClick, onRemove, onClickItem, activeItem}) => {
 
   const removeList = (item) => {
     if(window.confirm('Вы точно хотите удалить список?')){
@@ -18,10 +18,15 @@ const List = ({items, isRemovable, onClick, onRemove}) => {
     }
   }
   return (
+
     <ul onClick={onClick} className="list">
       {
         items.map((item, index) =>
-          <li key={index} className={classNames(item.className, {'active':item.active})}>
+          <li
+            key={index}
+            className={classNames(item.className, {'active': activeItem && activeItem.id === item.id})}
+            onClick={onClickItem ? () => onClickItem(item): null}
+          >
           <i>
             {item.icon ? (
               item.icon
@@ -29,8 +34,10 @@ const List = ({items, isRemovable, onClick, onRemove}) => {
               <Badge color={item.color.name}/>
             )}
           </i>
-          <span>{item.name}</span>
-          {isRemovable &&
+          <span>
+            {item.name}
+            {item.tasks && `(${item.tasks.length})`}</span>
+            {isRemovable &&
             <img
               className="list__remove-icon"
               src={removeSvg}

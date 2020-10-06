@@ -4,10 +4,9 @@ import axios from 'axios'
 import {List, AddList, Tasks} from './components'
 
 function App() {
-
-
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
+  const [activeItem, setactiveItem] = useState(null);
 
     useEffect(() => {
       axios
@@ -48,6 +47,10 @@ function App() {
             setLists(newLists);
           }}
           isRemovable
+          onClickItem={item => {
+            setactiveItem(item)
+          }}
+          activeItem={activeItem}
           />}
         <AddList onAdd={onAddlist} colors={colors}/>
       </div>
