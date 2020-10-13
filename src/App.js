@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
-import {List, AddList, Tasks} from './components'
+import {List, AddList, Tasks} from './components';
 
 function App() {
   const [lists, setLists] = useState(null);
@@ -25,7 +25,17 @@ function App() {
         ...lists,
         obj
       ];
-      setLists(newList)
+      setLists(newList);
+    }
+
+    const onEditListTitle = (id, title) => {
+      const newList = lists.map(item => {
+        if (item.id === id ){
+          item.name = title;
+        }
+        return item;
+      });
+      setLists(newList);
     }
 
   return (
@@ -55,7 +65,7 @@ function App() {
         <AddList onAdd={onAddlist} colors={colors}/>
       </div>
       <div className="todo__tasks">
-        {lists && activeItem && <Tasks list={activeItem}/>}
+        {lists && activeItem && <Tasks list={activeItem} onEditTitle={onEditListTitle}/>}
       </div>
     </div>
   );
