@@ -6,12 +6,12 @@
       "colorId": 4
     },
     {
-      "id": 3,
-      "name": "Фильмы и сериалы",
-      "colorId": 3
+      "name": "fg",
+      "colorId": 1,
+      "id": 3
     },
     {
-      "name": "s",
+      "name": "r",
       "colorId": 1,
       "id": 4
     }
@@ -40,24 +40,6 @@
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
       "completed": false
-    },
-    {
-      "listId": 5,
-      "text": "123",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "listId": 6,
-      "text": "Купить 1984!",
-      "completed": true,
-      "id": 10
-    },
-    {
-      "listId": 7,
-      "text": "222",
-      "completed": true,
-      "id": 12
     }
   ],
   "colors": [

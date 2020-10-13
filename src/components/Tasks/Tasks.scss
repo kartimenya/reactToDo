@@ -23,6 +23,13 @@
   }
 
   &__items{
+    h2{
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 39px;
+      text-align: center;
+      color: #C9D1D3;
+    }
     &-row{
       display: flex;
       align-items: center;

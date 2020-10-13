@@ -36,7 +36,8 @@ const List = ({items, isRemovable, onClick, onRemove, onClickItem, activeItem}) 
           </i>
           <span>
             {item.name}
-            {item.tasks && `(${item.tasks.length})`}</span>
+            {item.tasks && `(${item.tasks.length})`}
+          </span>
             {isRemovable &&
             <img
               className="list__remove-icon"
